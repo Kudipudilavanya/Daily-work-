@@ -1,0 +1,64 @@
+Creating Menu By Javascript
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #menu {
+            list-style: none;
+            padding: 0;
+        }
+        #menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        #menu li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        #menu li a:hover {
+            color: #ff4500; /* Change the color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="menu">
+        <li><a href="#" onclick="showContent('home')">Home</a></li>
+        <li><a href="#" onclick="showContent('about')">About</a></li>
+        <li><a href="#" onclick="showContent('contact')">Contact</a></li>
+    </ul>
+
+    <div id="content">
+        <!-- Content will be displayed here -->
+    </div>
+
+    <script>
+        function showContent(page) {
+            var contentDiv = document.getElementById('content');
+
+            // Clear existing content
+            contentDiv.innerHTML = '';
+
+            // Display content based on the selected page
+            if (page === 'home') {
+                contentDiv.innerHTML = '<h2>Welcome to the Home Page!</h2>';
+            } else if (page === 'about') {
+                contentDiv.innerHTML = '<h2>About Us</h2><p>We are a company that...</p>';
+            } else if (page === 'contact') {
+                contentDiv.innerHTML = '<h2>Contact Us</h2><p>Feel free to reach out to us...</p>';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
